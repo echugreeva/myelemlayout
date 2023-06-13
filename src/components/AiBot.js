@@ -1,6 +1,9 @@
-import contentimg from '../media/content.png'
+import { useState, useEffect } from 'react'
+import { addToLocalStorage, getFromLocalStorage } from '../helpers/localStorage'
+import BotCreationPopUp from './BotCreationPopUp'
 import BotCard from './BotCard'
-import { Input } from 'antd';
+import BotMenu from './BotMenu'
+import { Input, Select } from 'antd';
 
 const divStyle = {
     display: 'flex',
@@ -12,9 +15,32 @@ const { Search } = Input;
 const onSearch = (value) => console.log(value);
 
 const AiBotHome = () => {
+    const [bots, setBots] = useState(
+        //  getFromLocalStorage('bots') ||
+        [{
+            id: 1,
+            name: 'myBot',
+            site: 'mySite',
+            pagesIndexed: 1000,
+            urlIn: [],
+            urlEx: [],
+            greeting: "Hello",
+            color: 'pink'
+
+        }]
+    )
+
+    useEffect(() => {
+         setBots(getFromLocalStorage('bots'))
+    }, [bots])
+
+    const handleChange = (value) => {
+        console.log(`selected ${value}`);
+    };
+
     return (
         <div >
-            {/* <img src={contentimg} style={{objectFit: 'contain', width: '1000px'}}></img> */}
+
             <div style={divStyle}>
                 <h1>My AI Bots</h1>
                 <div style={divStyle}>
@@ -22,10 +48,10 @@ const AiBotHome = () => {
                         placeholder=""
                         onSearch={onSearch}
                         style={{
-                            width: 200,
+                            // width: 200,
                         }}
                     />
-                    <button>+ Create a new bot</button>
+                    <BotCreationPopUp />
                 </div>
 
             </div>
@@ -35,11 +61,46 @@ const AiBotHome = () => {
                     <button>x</button>
                     <button>x</button>
                 </div>
-                <p>dropdown</p>
+                <Select
+                    defaultValue="Date created"
+                    style={{
+                        width: 'max-content',
+                    }}
+                    onChange={handleChange}
+                    options={[
+                        {
+                            value: 'jack',
+                            label: 'Jack',
+                        },
+                        {
+                            value: 'lucy',
+                            label: 'Lucy',
+                        },
+                        {
+                            value: 'Yiminghe',
+                            label: 'yiminghe',
+                        },
+                        {
+                            value: 'disabled',
+                            label: 'Disabled',
+                            disabled: true,
+                        },
+                    ]}
+                />
             </div>
-            
-                <BotCard />
-            
+            {
+                bots.map(bot => {
+                    return (
+                        <div style={divStyle}>
+                            <BotCard data={bot}/>
+                        </div>
+                    )
+                })
+            }
+
+
+
+
         </div>
     )
 }

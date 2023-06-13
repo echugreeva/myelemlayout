@@ -3,16 +3,16 @@ import { Dropdown, Space } from 'antd';
 
 const items = [
   {
-    label: (<div  style={{display: 'flex'}}>
-                <UserOutlined/>
-                <div >
-                    <div>Elena Chugreeva</div>
-                    <div> elenac@elementor.com</div>
-                </div>
+    label: (<div style={{ display: 'flex' }}>
+      <UserOutlined />
+      <div >
+        <div>Elena Chugreeva</div>
+        <div> elenac@elementor.com</div>
+      </div>
 
-            </div>
-        
-        
+    </div>
+
+
     ),
     key: '0',
     disabled: true
@@ -28,46 +28,46 @@ const items = [
     type: 'divider',
   },
   {
-    label: <div  style={{display: 'flex'}}>
-    <LogoutOutlined/>
-    <div >
+    label: <div style={{ display: 'flex' }}>
+      <LogoutOutlined />
+      <div >
         Log Out
-    </div>
+      </div>
 
-</div>,
+    </div>,
     key: '3',
   },
 ];
 
 
-const DropdownStyle= {
-  
-   color: '#d5d8dc',
-   
-    alignItems: 'center',
-    display: 'flex',
-    flexDirection: 'row',
-   
-    marginLeft: 'auto',
+const DropdownStyle = {
+
+  color: '#d5d8dc',
+
+  alignItems: 'center',
+  display: 'flex',
+  flexDirection: 'row',
+
+  marginLeft: 'auto',
 
 
 }
 
 const NavMenu = () => {
-    return (
-        <Dropdown  menu={{ items }} trigger={['click']}>
-    <a onClick={(e) => e.preventDefault()}>
-      <Space>
-        <div style={{display: 'flex'}}>
-            <UserOutlined/> 
+  return (
+    <Dropdown menu={{ items }} trigger={['click']}>
+      <a onClick={(e) => e.preventDefault()}>
+        <Space>
+          <div style={{ display: 'flex' }}>
+            <UserOutlined />
             <div>Hi, Elena!</div>
-        </div>
-       
-        <DownOutlined />
-      </Space>
-    </a>
-  </Dropdown>
-    )
+          </div>
+
+          <DownOutlined />
+        </Space>
+      </a>
+    </Dropdown>
+  )
 }
 
 export default NavMenu

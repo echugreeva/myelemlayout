@@ -1,4 +1,5 @@
 import { Layout, Space } from 'antd';
+import logo from '../media/logo.svg';
 import NavMenu from './NavMenu';
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -10,11 +11,12 @@ const headerStyle = {
     // paddingRight: '2.5rem',
     alignItems: 'center',
     display: 'flex',
+    flexDirection: 'row',
     borderBottom: '1px solid #d5d8dc',
     height: '60px',
     minHeight: '60px',
     flexWrap: 'nowrap',
-    justufyContent: 'flex-start',
+    justifyContent: 'space-between',
     position: 'sticky',
     top: 0,
     zIndex: 1,
@@ -28,7 +30,7 @@ const headerStyle = {
   const Nav =()=> {
     return (
         <Header style={headerStyle}>
-          <p>Elementor</p>
+          <img src={logo} style={{height:'2em'}}/>
           <NavMenu/>
         </Header>
     )
