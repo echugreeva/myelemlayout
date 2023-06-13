@@ -26,7 +26,7 @@ import { useNavigate } from 'react-router-dom';
     icon: <MailOutlined />,
 },
 {
-    label: 'Bots',
+    label: 'AI Bots',
     key: 'bots',
     icon: <MailOutlined />,
 },
@@ -76,7 +76,7 @@ import { useNavigate } from 'react-router-dom';
         <Menu
           onClick={(e)=>{navigate(`/${e.key}`)}}
           style={{
-            width: 256,
+            // width: 256,
           }}
           defaultSelectedKeys={['1']}
         //   defaultOpenKeys={['sub1']}
