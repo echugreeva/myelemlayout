@@ -5,10 +5,16 @@ const { Header, Footer, Sider, Content } = Layout;
 
 
 const headerStyle = {
+
+ 
+
+
   
     backgroundColor: '#fff',
     // paddingLeft: '2.5rem',
     // paddingRight: '2.5rem',
+    padding: '14px 40px',
+    gap: '271px',
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'row',

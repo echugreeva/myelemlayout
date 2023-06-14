@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ant-table-cell  #three-dots {
+  margin-left: '0 1.5 rem'
+
+}
+
+.ant-table-thead ::before{
+  width: 0
+}
