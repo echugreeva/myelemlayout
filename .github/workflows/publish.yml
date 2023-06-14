@@ -23,8 +23,8 @@ jobs:
 
       - name: Build
         run: yarn run build
-        # env:
-        #   NODE_ENV: 'production'
+        env:
+          NODE_ENV: 'production'
       # Run a build step here if your project requires
 
       - name: Publish to Cloudflare Pages
