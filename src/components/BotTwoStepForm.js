@@ -50,14 +50,14 @@ const BotTwoStepForm =()=>{
 
     const h2Style = {
         textAlign: 'center',
-        fontFamily: 'Crimson Text'
+        fontFamily: 'DM Sans'
         
     }
   
     return (
     <FormContext.Provider value = {{inputs, setInputs}}>
       <div>
-        <h2 style={h2Style}> {step} of 2</h2>
+        <h2 style={h2Style}> Step {step} of 2</h2>
         {step === 1 && <BotCreationForm1 
         // data={data} 
         onSuccess={handleNextStep} />}
