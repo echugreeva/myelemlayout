@@ -16,15 +16,15 @@ jobs:
         with:
           node-version: 16.13
           cache: 'yarn' 
-          cache-dependency-path: '**/yarn.lock'
+          # cache-dependency-path: '**/yarn.lock'
 
       - name: Install NPM Dependencies
         run: yarn install
 
       - name: Build
         run: yarn run build
-        env:
-          NODE_ENV: 'production'
+        # env:
+        #   NODE_ENV: 'production'
       # Run a build step here if your project requires
 
       - name: Publish to Cloudflare Pages
