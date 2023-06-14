@@ -15,9 +15,11 @@ const BotCreationForm1 = () => {
     }
 
 
+
+
     return (
 
-        <Form layout={'vertical'}
+        <Form className='myForm' layout={'vertical'}
 
             style={{
                 maxWidth: '600px',

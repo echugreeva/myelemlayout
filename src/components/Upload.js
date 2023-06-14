@@ -35,8 +35,8 @@ const props = {
   },
 };
 const UploadInput = (uploaded) => (
-  <Upload {...props} uploaded={uploaded}>
-    <img src={uploadIcon}/>
+  <Upload {...props} uploaded={uploaded} >
+    <img src={uploadIcon} style={{width:'2rem'}}/>
   </Upload>
 );
 export default UploadInput;

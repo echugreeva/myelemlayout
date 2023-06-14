@@ -20,6 +20,10 @@ const ButtonStyle = {
   
 }
 
+const modalStyle ={
+  borderRadius:'0'
+}
+
 const BotCreationPopUp = () => {
   const [show, setShow] = useState(false)
   //     const {show, setShow,chosenBot,setChosen} = useContext(AppContext)
@@ -45,6 +49,7 @@ const BotCreationPopUp = () => {
         onCancel={() => { handleCancel() }}
         destroyOnClose
         footer={null}
+        style={modalStyle}
 
       >
         {/* <BotCreationForm1 */}

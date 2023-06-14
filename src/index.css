@@ -12,11 +12,68 @@ code {
     monospace;
 }
 
-.ant-table-cell  #three-dots {
+.ant-table-cell #three-dots {
   margin-left: '0 1.5 rem'
 
 }
 
-.ant-table-thead ::before{
+.ant-table-thead ::before {
   width: 0
+}
+
+.myForm {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.myForm h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #3A3F45;
+}
+
+.myForm h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3A3F45;
+
+}
+
+.myForm p {
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3A3F45;
+}
+
+.ant-upload .ant-upload-select
+ {
+  width: 1rem;
+  height: 1rem
+
+}
+
+.loading {
+  background-color: #E5F4FF;
+   color: #0065AD;
+   padding: 0.75em 1.5em
+}
+
+.active {
+  background-color: #E9FCF2;
+   color: #0F6737;
+   padding: 0.75em 1.5em
+
+  
+}
+
+.active img{
+  display: none
+   
+  
 }

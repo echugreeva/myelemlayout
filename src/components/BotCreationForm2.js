@@ -31,7 +31,7 @@ const BotCreationForm2 = () => {
 
     return (
 
-        <Form layout={'vertical'}
+        <Form className='myForm'layout={'vertical'}
 
 
             style={{

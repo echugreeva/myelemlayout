@@ -28,16 +28,36 @@ const BotTwoStepForm =()=>{
     const formSubmit = (e) => {
         e.preventDefault()
         let bots = getFromLocalStorage('bots');
-        bots.push(inputs)
+        bots.push({...inputs, status:'loading', pages:'14', address: 'mynewsite.com', image: 'https://images.pexels.com/photos/673648/pexels-photo-673648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', created: '15-06-2023',})
         addToLocalStorage('bots', bots)
         setToggle(toggle+1)
 
+    }
+
+    const ButtonStyle = {
+        backgroundColor: '#040080',
+        color: '#46F2B6',
+        padding: '12px 24px',
+        gap: '10px',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius:'0',
+        fontWeight: '500'
+        
+      }
+
+    const h2Style = {
+        textAlign: 'center',
+        fontFamily: 'Crimson Text'
+        
     }
   
     return (
     <FormContext.Provider value = {{inputs, setInputs}}>
       <div>
-        <h2>Step {step} of 2</h2>
+        <h2 style={h2Style}> {step} of 2</h2>
         {step === 1 && <BotCreationForm1 
         // data={data} 
         onSuccess={handleNextStep} />}
@@ -53,7 +73,7 @@ const BotTwoStepForm =()=>{
         )}
         
         {
-            step<2 &&<Button onClick={()=>{
+            step<2 &&<Button style={ButtonStyle} onClick={()=>{
             
                 setStep(step+1)}}>Next</Button>
         }
@@ -61,7 +81,7 @@ const BotTwoStepForm =()=>{
         
       </div>
       {
-        step===2 && <Button onClick={(e)=> {
+        step===2 && <Button style={ButtonStyle} onClick={(e)=> {
             formSubmit(e)
         }}>Submit </Button>
       }

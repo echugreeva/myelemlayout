@@ -10,6 +10,7 @@ import layoutOp from '../media/layoutIcon.svg'
 import styled from 'styled-components'
 import threedots from '../media/Shape.png'
 import BotMenuDots from './BotMenuDots'
+import progressIcon from  '../media/Oval Copy 2 (Stroke).png'
 
 const divStyleMain = {
     display: 'flex',
@@ -130,7 +131,7 @@ line-height: 120%;
             title: 'Status',
             dataIndex: 'status',
             key: 'status',
-            render: (text, record) => <badge style={{backgroundColor: '#E9FCF2', color:'#0F6737',padding: '0.75em 1.5em'}}>{record.status}</badge>
+            render: (text, record) => <badge className={record.status}><img src={progressIcon} style={{paddingTop: '2px', marginRight: '2px'}}/>{record.status}</badge>
         },
 
         {
