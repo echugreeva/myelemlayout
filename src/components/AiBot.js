@@ -16,7 +16,7 @@ const divStyleMain = {
     display: 'flex',
     justifyContent: 'space-between',
     justifyItem: 'center',
-    margin: '2.5rem 2rem',
+    margin: '2.5rem 3.5rem',
     alignItems: 'center'
 
 }
@@ -229,7 +229,7 @@ line-height: 120%;
                     ]}
                 />
             </div> */}
-            <div style={{paddingRight:'2rem', paddingLeft:'2rem' }}>
+            <div style={{paddingRight:'3.5rem', paddingLeft:'3.5rem' }}>
             <StyledTable pagination={false} columns={columns} dataSource={bots} />
             </div>
 

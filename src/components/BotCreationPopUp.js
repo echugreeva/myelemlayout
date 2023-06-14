@@ -27,8 +27,8 @@ const modalStyle ={
 const BotCreationPopUp = () => {
   const [show, setShow] = useState(false)
   //     const {show, setShow,chosenBot,setChosen} = useContext(AppContext)
-  const handleCancel = () => {
-    setShow(false);
+  const handleCancel = (x) => {
+    setShow(x);
 
   }
 
@@ -46,7 +46,7 @@ const BotCreationPopUp = () => {
       <Button style={ButtonStyle} size='large'onClick={() => { showModal() }}>+ Create new bot</Button>
       <Modal
         visible={show}
-        onCancel={() => { handleCancel() }}
+        onCancel={() => { handleCancel(false) }}
         destroyOnClose
         footer={null}
         style={modalStyle}
@@ -56,7 +56,7 @@ const BotCreationPopUp = () => {
         {/* // chosen={chosenBot} */}
         
         {/* <BotCreationForm2/> */}
-        <BotTwoStepForm/>
+        <BotTwoStepForm handleCancel={handleCancel}/>
       </Modal>
 
     </div>

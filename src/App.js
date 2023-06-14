@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import { useState, createContext,useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom';
 
-import { addToLocalStorage } from './helpers/localStorage';
+import { addToLocalStorage, getFromLocalStorage } from './helpers/localStorage';
 import { Layout, Space } from 'antd';
 import Nav from './components/Nav';
 import Sidebar from './components/Sidebar';
@@ -88,7 +88,8 @@ function App() {
   
   
   useEffect (()=> {
-    addToLocalStorage('bots',bots)
+    let newBots = getFromLocalStorage('bots')
+    setBots(newBots)
   },[toggle])
 
   return (

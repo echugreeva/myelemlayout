@@ -7,7 +7,7 @@ import { AppContext } from '../App';
 
 export const FormContext = createContext();
 
-const BotTwoStepForm =()=>{
+const BotTwoStepForm =({handleCancel})=>{
     const [data, setData] = useState({});
     const [step, setStep] = useState(1);
     const [inputs, setInputs] = useState('')
@@ -83,6 +83,7 @@ const BotTwoStepForm =()=>{
       {
         step===2 && <Button style={ButtonStyle} onClick={(e)=> {
             formSubmit(e)
+            handleCancel(false)
         }}>Submit </Button>
       }
       </FormContext.Provider>

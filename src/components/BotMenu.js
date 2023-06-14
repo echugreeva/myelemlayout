@@ -117,7 +117,7 @@ const menu = (
   return (
     <Dropdown overlay={menu}>
     <Button>
-      Actions <img src={down} style={{width:'1em', marginTop: '0.5em'}}/>
+      Manage bot <img src={down} style={{width:'1em', marginTop: '0.5em'}}/>
     </Button>
   </Dropdown>
   )
