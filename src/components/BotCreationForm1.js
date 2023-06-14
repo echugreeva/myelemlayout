@@ -36,7 +36,7 @@ const BotCreationForm1 = () => {
                 <Input placeholder="bot name"
                     type="text"
                     name="name"
-                    value={""}
+                    value={""||inputs.name}
                     onChange={(event)=> {handleChange('name', event.target.value)}}
                 />
             </Form.Item>

@@ -60,7 +60,7 @@ const BotCreationForm2 = () => {
                 <Input placeholder="example.url.com"
                     type="text"
                     name="url-include"
-                    value={""}
+                    value={""||inputs.include}
 
                     onChange={(event)=> {handleChange('include', event.target.value)}}
                 />
@@ -69,7 +69,7 @@ const BotCreationForm2 = () => {
                 <TextArea rows={3} placeholder="example.url.com"
                     type="text"
                     name="url-exclude"
-                    value={""}
+                    value={""||inputs.exclude}
 
                     onChange={(event)=> {handleChange('exclude', event.target.value)}}
                 />
@@ -108,7 +108,7 @@ const BotCreationForm2 = () => {
                     type="text"
                     name="greeting"
                     // value={inputs.greeting || ""}
-                    value={""}
+                    value={""||inputs.greeting}
                     onChange={(event)=> {handleChange('greeting', event.target.value)}}
                 />
             </Form.Item>
