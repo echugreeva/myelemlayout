@@ -28,7 +28,7 @@ const BotTwoStepForm =({handleCancel})=>{
     const formSubmit = (e) => {
         e.preventDefault()
         let bots = getFromLocalStorage('bots');
-        bots.push({...inputs, status:'loading', pages:'14', address: 'mynewsite.com', image: 'https://images.pexels.com/photos/673648/pexels-photo-673648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', created: '15-06-2023',})
+        bots.push({...inputs, status:'indexing', pages:'14', address: 'mynewsite.com', image: 'https://images.pexels.com/photos/673648/pexels-photo-673648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', created: '15-06-2023',})
         addToLocalStorage('bots', bots)
         setToggle(toggle+1)
 
@@ -44,7 +44,8 @@ const BotTwoStepForm =({handleCancel})=>{
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius:'0',
-        fontWeight: '500'
+        fontWeight: '500',
+        marginLeft: 'auto'
         
       }
 

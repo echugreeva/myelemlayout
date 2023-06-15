@@ -58,7 +58,7 @@ code {
 
 }
 
-.loading {
+.indexing {
   background-color: #E5F4FF;
    color: #0065AD;
    padding: 0.75em 1.5em
@@ -78,8 +78,9 @@ code {
   
 }
 
-.loading img {
+.indexing img {
   animation: spin 2s linear infinite;
+  margin-bottom: -3px;
 }
 
 @keyframes spin {

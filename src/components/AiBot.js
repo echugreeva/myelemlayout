@@ -131,7 +131,7 @@ line-height: 120%;
             title: 'Status',
             dataIndex: 'status',
             key: 'status',
-            render: (text, record) => <badge className={record.status}><img src={progressIcon} style={{paddingTop: '2px', marginRight: '2px'}}/>{record.status}</badge>
+            render: (text, record) => <badge className={record.status}><img src={progressIcon} style={{paddingTop: '2px', marginRight: '2px', marginBottom: '-3px'}}/><span style={{paddingLeft:'1em'}}>{record.status}</span></badge>
         },
 
         {
