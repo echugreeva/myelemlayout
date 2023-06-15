@@ -65,7 +65,7 @@ const BotCreationForm2 = () => {
                     onChange={(event)=> {handleChange('include', event.target.value)}}
                 />
             </Form.Item>
-            <Form.Item label="Urls to include">
+            <Form.Item label="Urls to exclude">
                 <TextArea rows={3} placeholder="example.url.com"
                     type="text"
                     name="url-exclude"
